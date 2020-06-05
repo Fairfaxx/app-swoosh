@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="126.5625"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="OmG-Zu-7ia">
             <objects>
-                <viewController id="FFR-cG-5p2" sceneMemberID="viewController">
+                <viewController id="FFR-cG-5p2" customClass="LeagueVC" customModule="swoosh_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sbz-2w-Cd6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,6 +145,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="FFR-cG-5p2" eventType="touchUpInside" id="Dc8-Dr-bjh"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="3CQ-Tl-o0Q">
                                 <rect key="frame" x="0.0" y="59" width="414" height="109"/>
@@ -193,16 +196,19 @@
                         <viewLayoutGuide key="safeArea" id="sl2-Ne-ibL"/>
                     </view>
                     <navigationItem key="navigationItem" id="4D4-Ku-TbE"/>
+                    <connections>
+                        <segue destination="OA8-Ew-xXi" kind="modal" identifier="skillVCSegue" modalPresentationStyle="fullScreen" id="7De-8c-paM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Wr-sY-7Db" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="K03-hw-pHP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="713.04347826086962" y="123.88392857142857"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="QfP-xT-3E8">
             <objects>
-                <viewController id="OA8-Ew-xXi" sceneMemberID="viewController">
+                <viewController id="OA8-Ew-xXi" customClass="SkillVC" customModule="swoosh_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cl9-1b-9Vg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -283,10 +289,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SN6-eb-i1o"/>
                     </view>
+                    <navigationItem key="navigationItem" id="oKk-DG-qsI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kdt-bi-rOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1394.2028985507247" y="126.5625"/>
+            <point key="canvasLocation" x="1597" y="127"/>
         </scene>
     </scenes>
     <resources>
