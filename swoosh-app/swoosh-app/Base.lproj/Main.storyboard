@@ -49,6 +49,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="FFR-cG-5p2" kind="modal" modalPresentationStyle="fullScreen" id="OTL-WO-dw6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -79,13 +82,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO ALL IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ra9-0m-5Ty">
-                    <rect key="frame" x="0.0" y="0.0" width="294" height="57"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="47"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </objects>
             <point key="canvasLocation" x="-57.971014492753625" y="126.5625"/>
         </scene>
@@ -164,14 +160,27 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WyQ-wo-oNv">
+                                <rect key="frame" x="9" y="31" width="38" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="MfF-wA-x4p"/>
+                                    <constraint firstAttribute="width" constant="38" id="ZKe-S2-vNL"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="K03-hw-pHP" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="PAI-95-Y2z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Ak8-O3-e9e" firstAttribute="top" secondItem="3CQ-Tl-o0Q" secondAttribute="bottom" constant="53" id="2ZR-Bt-UVo"/>
                             <constraint firstItem="sl2-Ne-ibL" firstAttribute="trailing" secondItem="3CQ-Tl-o0Q" secondAttribute="trailing" id="4Ox-ck-TDt"/>
+                            <constraint firstItem="WyQ-wo-oNv" firstAttribute="top" secondItem="Sbz-2w-Cd6" secondAttribute="top" constant="31" id="Ltp-NK-dhl"/>
                             <constraint firstItem="DPY-J3-btV" firstAttribute="leading" secondItem="Sbz-2w-Cd6" secondAttribute="leading" id="OkI-sS-UN1"/>
                             <constraint firstItem="DPY-J3-btV" firstAttribute="trailing" secondItem="Sbz-2w-Cd6" secondAttribute="trailing" id="Q82-RR-ecO"/>
                             <constraint firstItem="M5T-Mv-WuW" firstAttribute="bottom" secondItem="sl2-Ne-ibL" secondAttribute="bottom" constant="-10" id="UXE-Ym-lFh"/>
+                            <constraint firstItem="WyQ-wo-oNv" firstAttribute="leading" secondItem="sl2-Ne-ibL" secondAttribute="leading" constant="9" id="UeF-sJ-j2y"/>
                             <constraint firstAttribute="bottom" secondItem="DPY-J3-btV" secondAttribute="bottom" id="eMe-Cb-541"/>
                             <constraint firstItem="Ak8-O3-e9e" firstAttribute="leading" secondItem="sl2-Ne-ibL" secondAttribute="leading" constant="11" id="eT9-yb-fDA"/>
                             <constraint firstItem="DPY-J3-btV" firstAttribute="top" secondItem="Sbz-2w-Cd6" secondAttribute="top" id="j6b-86-hwx"/>
@@ -183,8 +192,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sl2-Ne-ibL"/>
                     </view>
+                    <navigationItem key="navigationItem" id="4D4-Ku-TbE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Wr-sY-7Db" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="K03-hw-pHP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="713.04347826086962" y="123.88392857142857"/>
         </scene>
@@ -279,6 +290,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
